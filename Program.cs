@@ -10,8 +10,8 @@ namespace URI_1043
             float a, b, c, ladoMaior, lado1, lado2, perimetro, area;
 
             string[] valores = Console.ReadLine().Split(' ');
-            a = float.Parse(valores[0], CultureInfo.InvariantCulture);//a recebe float.parse do vetor valores na posição 0
-            b = float.Parse(valores[1], CultureInfo.InvariantCulture);
+            a = float.Parse(valores[0], CultureInfo.InvariantCulture);//a recebe float.parse do vetor valores na posição 0 sem variação de ponto ou virgula
+            b = float.Parse(valores[1], CultureInfo.InvariantCulture);//se não usar quando colocar o "." não vai identificar que é um número com ponto flutuante, apenas com ","
             c = float.Parse(valores[2], CultureInfo.InvariantCulture);
 
             if (a > b && a>c){
@@ -38,8 +38,6 @@ namespace URI_1043
                 area = ((a + b) * c) / 2;
                 Console.WriteLine("Area = "+ area.ToString("F1", CultureInfo.InvariantCulture));
             }
-
-
         }
     }
 }
